@@ -14,11 +14,11 @@ public class ScheduledTasks{
 	@Autowired
 	TransactionCalculator transactionCalculator;
 	
-	@Scheduled(fixedRate = 60000)
+	@Scheduled(fixedRate = 1000)
 	public void scheduleTaskWithFixedRate() {
 		System.out.println(System.currentTimeMillis());
 		Timer timer = new Timer();
-		timer.schedule(transactionCalculator, 0, 60000);
+		timer.schedule(transactionCalculator, 0, 1000);
 	}
 
 }
